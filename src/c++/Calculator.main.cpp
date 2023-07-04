@@ -9,8 +9,8 @@ int main()
     double wynik = 0.0;
     char oper = '+';
 
-    cout << "Kalkulator\n\n";
-    cout << "Wpisz operacje do wykonania. format: a+b | a-b | a*b | a/b\n";
+    cout << "Calculator\n\n";
+    cout << "Enter the operation to be performed. Format: a+b | a-b | a*b | a/b\n";
 
     Calculator calculator;
     while (true)
@@ -19,7 +19,7 @@ int main()
         cin >> input;
         if (oper == '/' && y == 0)
         {
-            cout << "Nawet nie probuj\n";
+            cout << "Dividing by zero is not allowed\n";
             continue;
         }
         else
@@ -30,7 +30,7 @@ int main()
                 if (!isdigit(input[i]))
                 {
                     double answer = calculator.Calculate(x, oper, y);
-                    cout << "Wynik to: " << answer << endl;
+                    cout << "Result is: " << answer << endl;
                 }
                 else
                 {
