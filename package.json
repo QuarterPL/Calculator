@@ -1,11 +1,13 @@
 {
-  "name": "src",
+  "name": "calculator",
   "version": "1.0.0",
-  "description": "",
-  "main": "a.out.js",
+  "description": "A basic calculator i wanna expand in future",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "embind": "emcc --bind -O3 ./src/cpp/bundle.cpp"
+    "build:cpp": "gcc -c -Wall -Werror -fpic ./src/CalculatorLib/Calculator.cpp",
+    "build:o": "gcc -shared -o Calculator.so Calculator.o",
+    "build:lib": "npm run build:cpp && npm run build:o && mv Calculator.so Calculator.o ./src/CalculatorLib"
   },
   "keywords": [],
   "author": "",
