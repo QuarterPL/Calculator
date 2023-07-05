@@ -1,0 +1,13 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a.out.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "embind": "emcc --bind -O3 ./src/cpp/bundle.cpp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

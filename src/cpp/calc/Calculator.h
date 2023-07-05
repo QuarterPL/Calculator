@@ -1,8 +1,10 @@
-#pragma once
+// #pragma once
+#define CALCULATOR_H
 class Calculator
 {
 public:
-	double Calculate(double x, char oper, double y)
+	Calculator() {}
+	double calculate(double x, char oper, double y)
 	{
 		switch (oper)
 		{
