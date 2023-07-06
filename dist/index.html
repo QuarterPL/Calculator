@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
     <title>Calculator</title>
-    <button>What</button>
   </head>
-  <body></body>
+  <body>
+    <div id="calculator">
+      <input type="tel" id="a" />
+      <select name="sign" id="sign">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="^">^</option>
+      </select>
+      <input type="tel" id="b" />
+      <button id="get-result-button">Get result</button>
+      <p id="result-output"></p>
+    </div>
+  </body>
 </html>
