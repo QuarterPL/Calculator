@@ -1,3 +1,5 @@
+import signCheatSheet from "./signCheatSheet";
+
 let calculatorLib = null;
 WebAssembly.instantiateStreaming(fetch("bundle.wasm"), {}).then((results) => {
   calculatorLib = results.instance.exports;
@@ -6,5 +8,5 @@ WebAssembly.instantiateStreaming(fetch("bundle.wasm"), {}).then((results) => {
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  console.log(calculatorLib.calculate(5, 43, 3));
+  alert(calculatorLib.calculate(5, signCheatSheet["/"], 3));
 });
