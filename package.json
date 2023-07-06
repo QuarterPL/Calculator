@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:c": "emcc ./src/cpp/bundle.c -o ./dist/bundle.js -s NO_EXIT_RUNTIME=1 && rm ./dist/bundle.js",
+    "build:c": "emcc -s NO_EXIT_RUNTIME=1 -O2 ./src/cpp/bundle.c -o ./dist/bundle.js && rm ./dist/bundle.js",
     "build:site": "npm run build:c && webpack",
     "run": "npm run build:site && webpack serve --open"
   },

@@ -8,5 +8,5 @@ WebAssembly.instantiateStreaming(fetch("bundle.wasm"), {}).then((results) => {
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  alert(calculatorLib.calculate(5, signCheatSheet["/"], 3));
+  alert(calculatorLib.calculate(5, signCheatSheet["^"], 3));
 });

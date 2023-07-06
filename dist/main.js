@@ -1,9 +1,1 @@
-(() => {
-  let e = null;
-  WebAssembly.instantiateStreaming(fetch("bundle.wasm"), {}).then((t) => {
-    (e = t.instance.exports), console.log(e);
-  }),
-    document.querySelector("button").addEventListener("click", () => {
-      console.log(e.calculate(5, 43, 3));
-    });
-})();
+(()=>{"use strict";let e=null;WebAssembly.instantiateStreaming(fetch("bundle.wasm"),{}).then((t=>{e=t.instance.exports,console.log(e)})),document.querySelector("button").addEventListener("click",(()=>{alert(e.calculate(5,94,3))}))})();
