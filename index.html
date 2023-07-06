@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      let wasmLib = null;
+      WebAssembly.instantiateStreaming(fetch("bundle.wasm"), {}).then(
+        (results) => {
+          wasmLib = results.instance.exports;
+          console.log(wasmLib);
+        }
+      );
+      function run_wasm() {
+        console.log(wasmLib.calculate(5, 43, 3));
+      }
+    </script>
+    <title>Calculator</title>
+    <button onclick="run_wasm()">What</button>
+  </head>
+  <body></body>
+</html>
